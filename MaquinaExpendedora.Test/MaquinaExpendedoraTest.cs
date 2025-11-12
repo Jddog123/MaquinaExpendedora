@@ -175,4 +175,19 @@ public class MaquinaExpendedoraTest
 
         _maquina.Display.Should().Be("Price: $ 1,00 - Saldo: $ 0,40");
     }
+    
+    [Fact]
+    public void Si_SiInserto4MonedasQuarterYSeleccionoProductoCola_Debe_DispleyMostrarThankYoueInsertCoint()
+    {
+        _maquina.InsertarMoneda(Moneda.Quarter);
+        _maquina.InsertarMoneda(Moneda.Quarter);
+        _maquina.InsertarMoneda(Moneda.Quarter);
+        _maquina.InsertarMoneda(Moneda.Quarter);
+        _maquina.SeleccionarProducto(Productos.Cola);
+
+        _maquina.Display.Should().Be("THANK YOU - INSERT COIN");
+
+    }
+
+  
 }

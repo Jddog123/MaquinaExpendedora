@@ -49,7 +49,7 @@ public class Maquina
 
     private string MensajeInsertCoinOSaldo(decimal valorProducto)
     {
-        return _saldo < valorProducto ? MostrarSaldo() : MensajeInsertarMoneda;
+        return _saldo > 0 && _saldo < valorProducto ? MostrarSaldo() : MensajeInsertarMoneda;
     }
 
     private decimal ObtenerValorProducto(Productos producto)
