@@ -1,0 +1,4 @@
+﻿- Insertar monedas
+- Devolver cambio
+- Validar monedas
+- Saldo monedero
