@@ -166,7 +166,7 @@ public class MaquinaExpendedoraTest
     }
 
     [Fact]
-    public void Si_SeleccionoCocaySaldoMenoraUno_Debe_DisplayMostrarPrecioYSaldo()
+    public void Si_SeleccionoColaySaldoMenoraUno_Debe_DisplayMostrarPrecioYSaldo()
     {
         _maquina.InsertarMoneda(Moneda.Nickel);
         _maquina.InsertarMoneda(Moneda.Dime);
@@ -174,6 +174,25 @@ public class MaquinaExpendedoraTest
         _maquina.SeleccionarProducto(Productos.Cola);
 
         _maquina.Display.Should().Be("Price: $ 1,00 - Saldo: $ 0,40");
+    }
+    
+    [Fact]
+    public void Si_SeleccionoChipySaldoMenoraUno_Debe_DisplayMostrarPrecioYSaldo()
+    {
+        _maquina.InsertarMoneda(Moneda.Nickel);
+        _maquina.SeleccionarProducto(Productos.Chip);
+
+        _maquina.Display.Should().Be("Price: $ 0,50 - Saldo: $ 0,05");
+    }
+    
+    [Fact]
+    public void Si_SeleccionoCandyySaldoMenoraUno_Debe_DisplayMostrarPrecioYSaldo()
+    {
+        _maquina.InsertarMoneda(Moneda.Nickel);
+        _maquina.InsertarMoneda(Moneda.Quarter);
+        _maquina.SeleccionarProducto(Productos.Candy);
+
+        _maquina.Display.Should().Be("Price: $ 0,65 - Saldo: $ 0,30");
     }
     
     [Fact]
