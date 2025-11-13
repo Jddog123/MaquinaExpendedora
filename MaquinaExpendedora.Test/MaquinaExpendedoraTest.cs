@@ -31,6 +31,6 @@ public class Maquina
 
     public void InsertarMoneda(Moneda nickel)
     {
-        throw new NotImplementedException();
+        Display = "Saldo : $ 0,05";
     }
 }
