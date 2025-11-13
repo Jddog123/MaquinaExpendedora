@@ -5,7 +5,7 @@ namespace MaquinaExpendedora;
 public class MaquinaExpendedoraTest
 {
     [Fact]
-    public void SiIniciaMaquina_Debe_DisplayMostrarInsertCoin()
+    public void Si_IniciaMaquina_Debe_DisplayMostrarInsertCoin()
     {
         var maquina = new Maquina();
         
@@ -15,5 +15,6 @@ public class MaquinaExpendedoraTest
 
 public class Maquina
 {
-    public string Display { get; set; } = "INSERT COIN";
+    private const string InsertCoinMessage = "INSERT COIN";
+    public string Display { get; private set; } = InsertCoinMessage;
 }
