@@ -27,10 +27,14 @@ public class MaquinaExpendedoraTest
 public class Maquina
 {
     private const string InsertCoinMessage = "INSERT COIN";
+    private const string MensajeSaldo = "Saldo : {0}";
     public string Display { get; private set; } = InsertCoinMessage;
 
-    public void InsertarMoneda(Moneda nickel)
+    public void InsertarMoneda(Moneda moneda)
     {
-        Display = "Saldo : $ 0,05";
+        if(moneda == Moneda.Nickel)
+            Display = MostrarMensajeNickel();
     }
+
+    private static string MostrarMensajeNickel() => string.Format(MensajeSaldo, "$ 0,05");
 }
