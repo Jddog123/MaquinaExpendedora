@@ -30,7 +30,7 @@ public class MaquinaExpendedoraTest
         
         maquina.InsertarMoneda(Moneda.Dime);
 
-        maquina.Display.Should().Be("Saldo : $ 0,05");
+        maquina.Display.Should().Be("Saldo : $ 0,10");
     }
 }
 
@@ -42,6 +42,8 @@ public class Maquina
 
     public void InsertarMoneda(Moneda moneda)
     {
+        if (moneda == Moneda.Dime)
+            Display = "Saldo : $ 0,10";
         if(moneda == Moneda.Nickel)
             Display = MostrarMensajeNickel();
     }
