@@ -43,10 +43,12 @@ public class Maquina
     public void InsertarMoneda(Moneda moneda)
     {
         if (moneda == Moneda.Dime)
-            Display = "Saldo : $ 0,10";
+            Display = MostrarMensajeDime();
         if(moneda == Moneda.Nickel)
             Display = MostrarMensajeNickel();
     }
+
+    private static string MostrarMensajeDime() =>  string.Format(MensajeSaldo, "$ 0,10");
 
     private static string MostrarMensajeNickel() => string.Format(MensajeSaldo, "$ 0,05");
 }
