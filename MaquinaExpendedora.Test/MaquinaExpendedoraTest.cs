@@ -15,5 +15,5 @@ public class MaquinaExpendedoraTest
 
 public class Maquina
 {
-    public string Display { get; set; }
+    public string Display { get; set; } = "INSERT COIN";
 }
