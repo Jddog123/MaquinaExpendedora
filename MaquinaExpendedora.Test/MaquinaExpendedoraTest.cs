@@ -22,6 +22,16 @@ public class MaquinaExpendedoraTest
 
         maquina.Display.Should().Be("Saldo : $ 0,05");
     }
+
+    [Fact]
+    public void Si_InsertoMonedaDime_Debe_DisplayMostrarSaldoCeroUno()
+    {
+        var maquina = new Maquina();
+        
+        maquina.InsertarMoneda(Moneda.Dime);
+
+        maquina.Display.Should().Be("Saldo : $ 0,05");
+    }
 }
 
 public class Maquina

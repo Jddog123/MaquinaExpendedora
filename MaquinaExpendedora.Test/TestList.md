@@ -1,8 +1,8 @@
 ﻿# Listado de pruebas – MaquinaExpendedoraTest
 
 - [X] SiIniciaMaquina_Debe_DisplayMOstrarInsertCoin
-- [ ] Si_InsertoMonedaNickel_Debe_DisplayMostrarSaldoCeroCeroCinco
-- [ ] Si_InsertoMonedaDime_Debe_MostrarSaldo10EnElDisplay
+- [X] Si_InsertoMonedaNickel_Debe_DisplayMostrarSaldoCeroCeroCinco
+- [ ] Si_InsertoMonedaDime_Debe_DisplayMostrarSaldoCeroUno
 - [ ] Si_InsertoMonedaQuarter_Debe_MostrarSaldo25EnElDisplay
 - [ ] Si_RecibeUnPennySinSaldo_Debe_MostrarInsertCoinYEnElReturnCoinDebeEstar1Penny
 - [ ] Si_Inserto2Nickel_Debe_Mostrar0_10
